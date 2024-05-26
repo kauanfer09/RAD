@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resultados da Busca por Data</title>
+</head>
+<body>
+    <h1>Resultados da Busca por Data</h1>
+    <ul>
+        {% for mission in missions %}
+        <li>
+            <a href="{{ url_for('viewMissionDetails', missionId=mission.missionDetails) }}">
+                {{ mission.missionName }} - {{ mission.date }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('search_date') }}">Nova Busca</a>
+</body>
+</html>

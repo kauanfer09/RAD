@@ -1,0 +1,28 @@
+PROJETOFLASK -> Pasta principal que contém tudo que o programa está utilizando.
+requeriments -> Pequena lista de toda as dependências. Útil para clonagem do código via GITHUB.
+
+instance-> Banco de Dados que recebe os dados digitados nas páginas HTML do projeto.
+
+Pasta APP -> contém subpastas que organizam o projeto para melhor entendimento do mesmo:
+
+    Controllers -> Literalmente os controladores do código, contendo ROTAS (routes.py) para as páginas html.
+    Estas rotas, basicamente, estão definindo o que cada página vai fazer e como vai fazer. 
+    Parte não visual para o cliente final, se fosse o caso.
+
+    Models -> Pasta que contém a construção geral do BD que vai receber e armazenar a informações.
+
+    Templates -> Pasta que contém todos os arquivos HTML da aplicação. Uma breve explicação sobre as mesmas:
+
+        mission: página principal, aqui você pode ver as missões já registradas e ao CLICAR, ver os detalhes.
+
+        missionId: página que exibe os detalhes das missões quando se clica no link.
+
+        adicionar_missao: clicando nesta opção, você pode adicionar novas missões e dados para elas,
+        se não for possível por algum motivo, vai retornar a páginar de error.
+
+        search_by_id: aqui, basta digitar um ID existente e o programa retorna a página de detalhes
+        desse ID, caso não exista nenhum ID igual o digitado, retorna a página de erro.
+
+        search_date_form: funciona como o ID, mas usando a data. 
+
+    __init__.py -> arquivo necessário para que o Python reconheça as pastas como PACOTES.

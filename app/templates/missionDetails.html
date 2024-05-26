@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detalhes da Missão</title>
+</head>
+<body>
+    <h1>Detalhes da Missão</h1>
+    <p>ID: {{ mission.missionId }}</p>
+    <p>Nome: {{ mission.missionName }}</p>
+    <p>Data: {{ mission.date }}</p>
+    <p>Destino: {{ mission.destiny }}</p>
+    <p>Estado: {{ mission.missionState }}</p>
+    <p>Tripulação: {{ mission.missionCrew }}</p>
+    <p>Carga Útil: {{ mission.payload }}</p>
+    <p>Duração: {{ mission.duration }}</p>
+    <p>Custo: {{ mission.cost }}</p>
+    <p>Status: {{ mission.status }}</p>
+    <a href="{{ url_for('viewMissionDetails') }}">Voltar para a lista de missões</a>
+</body>
+</html>

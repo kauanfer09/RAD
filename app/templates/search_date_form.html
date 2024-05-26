@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buscar Missão por Data</title>
+</head>
+<body>
+    <h1>Buscar Missão por Data</h1>
+    <form method="post" action="{{ url_for('search_date') }}">
+        <label for="start_date">Data de Início:</label>
+        <input type="date" id="start_date" name="start_date" required>
+        <br>
+        <label for="end_date">Data de Fim:</label>
+        <input type="date" id="end_date" name="end_date">
+        <br>
+        <input type="submit" value="Buscar" required>
+    </form>
+</body>
+</html>

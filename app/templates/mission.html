@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Missões</title>
+</head>
+<body>
+    <h1>Lista de Missões</h1>
+    <ul>
+        {% for mission in missions %}
+        <li>
+            <a href="{{ url_for('viewMissionDetails', missionDetails=mission.missionDetails) }}">
+                {{ mission.missionName }} - {{ mission.date }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('adicionar_missao') }}">Adicionar Nova Missão</a>
+    <a href="{{ url_for('search_date') }}">Pesquisar Missão por Data</a>
+    <a href="{{ url_for('search_mission_by_id') }}">Pesquisar Missão por ID</a>
+</body>
+</html>

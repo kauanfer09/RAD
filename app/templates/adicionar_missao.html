@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Adicionar Missão</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Adicionar Nova Missão</h1>
+        <form method="post" action="{{ url_for('adicionar_missao') }}">
+            <label for="missionName">Nome da Missão:</label>
+            <input type="text" id="missionName" name="missionName" required>
+            <br>
+            <label for="date">Data de Lançamento:</label>
+            <input type="date" id="date" name="date" required>
+            <br>
+            <label for="destiny">Destino:</label>
+            <input type="text" id="destiny" name="destiny" required>
+            <br>
+            <label for="missionState">Estado da Missão:</label>
+            <select id="missionState" name="missionState" required>
+                <option value="Ativa">Ativa</option>
+                <option value="Concluída">Concluída</option>
+                <option value="Abortada">Abortada</option>
+            </select>
+            <br>
+            <label for="missionCrew">Tripulação:</label>
+            <input type="text" id="missionCrew" name="missionCrew" required>
+            <br>
+            <label for="payload">Carga Útil:</label>
+            <input type="text" id="payload" name="payload" required>
+            <br>
+            <label for="duration">Duração:</label>
+            <input type="text" id="duration" name="duration" required>
+            <br>
+            <label for="cost">Custo:</label>
+            <input type="number" id="cost" name="cost" required>
+            <br>
+            <label for="status">Status:</label>
+            <input type="text" id="status" name="status" required>
+            <br>
+            <input type="submit" value="Adicionar Missão">
+        </form>
+    </div>
+</body>
+</html>
