@@ -11,12 +11,12 @@ def viewMission():
     return render_template('mission.html', missions=missions)  # Renderiza o template 'mission.html' passando as missões como contexto
 
 # Rota para visualizar os detalhes das missões
-@app.route('/mission/missionDetails')
+@app.route('/mission/missionDetails/<int:mission_id>')
 def viewMissionDetails(mission_id):
     try:
         mission = Mission.query.get(mission_id)  # Consulta a missão pelo ID
         if mission:
-            return render_template('mission_id', mission=mission)  # Renderiza o template 'missionId.html' passando a missão como contexto
+            return render_template('mission_id.html', mission=mission)  # Renderiza o template 'missionId.html' passando a missão como contexto
     except Exception as e:
         return render_template('error.html', message=f'Erro ao processar solicitação: {str(e)}'), 500  # Renderiza o template 'error.html' com uma mensagem de erro
 
