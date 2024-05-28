@@ -8,7 +8,8 @@
     <ul>
         {% for mission in missions %}
         <li>
-            <a href="{{ url_for('viewMissionDetails', missionDetails=mission.missionDetails) }}">
+            
+            <a href="{{ url_for('viewMissionDetails', mission_id=mission.missionId) }}">
                 {{ mission.missionName }} - {{ mission.date }}
             </a>
         </li>

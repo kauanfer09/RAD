@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Missões</title>
+</head>
+<body>
+    <form method="POST" action="{{ url_for('edit_mission', mission_id=mission.missionId) }}">
+        <label for="missionName">Nome: </label>
+        <input type="text" id="missionName" name="missionName" value="{{ mission.missionName }}" required> <br>
+
+        <label for="date">Data: </label>
+        <input type="date" id="date" name="date" value="{{ mission.date.strftime('%Y-%m-%d') }}" required> <br>
+
+        <label for="destiny">Destino: </label>
+        <input type="text" id="destiny" name="destiny" value="{{ mission.destiny }}" required> <br>
+
+        <label for="missionState">Estado: </label>
+        <input type="text" id="missionState" name="missionState" value="{{mission.missionState }}" required> <br>
+
+        <label for="missionCrew">Tripulação: </label>
+        <input type="text" id="missionCrew" name="missionCrew" value="{{ mission.missionCrew }}" required> <br>
+
+        <label for="payload">Carga Útil: </label>
+        <input type="text" id="payload" name="payload" value="{{ mission.payload }}" required> <br>
+
+        <label for="duration">Duração: </label>
+        <input type="text" id="duration" name="duration" value="{{ mission.duration }}" required> <br>
+
+        <label for="cost">Custo: </label>
+        <input type="text" id="cost" name="cost" value="{{ mission.cost }}" required> <br>
+
+        <label for="status">Status: </label>
+        <input type="text" id="status" name="status" value="{{ mission.status }}" required> <br>
+
+        <button type="submit"> Salvar </button>
+
+        <a href="{{ url_for('viewMissionDetails', mission_id=mission.missionId) }}">Cancelar</a>
+
+    </form>
+</body>
+</html>

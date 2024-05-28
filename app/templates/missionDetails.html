@@ -15,6 +15,11 @@
     <p>Duração: {{ mission.duration }}</p>
     <p>Custo: {{ mission.cost }}</p>
     <p>Status: {{ mission.status }}</p>
-    <a href="{{ url_for('viewMissionDetails') }}">Voltar para a lista de missões</a>
+    <a href="{{ url_for('viewMission') }}">Voltar para a lista de missões</a>
+    <a href="{{ url_for('edit_mission', mission_id=mission.missionId) }}"> Editar Missão</a>  
+
+    <form action="{{ url_for('delete_mission', mission_id=mission.missionId) }}" method="post">
+        <button type="submit">Deletar Missão</button>
+    </form>
 </body>
 </html>
